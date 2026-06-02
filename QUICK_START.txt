@@ -1,0 +1,262 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                    🚀 QUICK RUN COMMANDS                            ║
+║               Copy & Paste ke Terminal/Command Prompt                ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+═══════════════════════════════════════════════════════════════════════
+ 📍 WINDOWS USERS (Command Prompt atau PowerShell)
+═══════════════════════════════════════════════════════════════════════
+
+1️⃣  Buka folder project:
+    ━━━━━━━━━━━━━━━━━━━━━━━━
+    cd "c:\SIMONE\LANDING PAGE\lp-kpm"
+
+
+2️⃣  Jalankan setup (hanya 1x):
+    ━━━━━━━━━━━━━━━━━━━━━━━━
+    composer run setup
+    
+    ⏱️  Tunggu 2-5 menit sampai selesai...
+    
+    ✅ Setelah selesai, Anda akan melihat:
+       - vendor/ folder created
+       - node_modules/ folder created
+       - .env file created
+       - Database initialized
+
+
+3️⃣  Jalankan project (setiap kali development):
+    ━━━━━━━━━━━━━━━━━━━━━━━━
+    composer run dev
+    
+    ⏱️  Tunggu sampai muncul tulisan:
+       "Laravel development server started"
+       "VITE v... ready in XXms"
+
+
+4️⃣  Buka browser:
+    ━━━━━━━━━━━━━━━━━━━━━━━━
+    http://localhost:8000
+
+
+5️⃣  Lihat demo components:
+    ━━━━━━━━━━━━━━━━━━━━━━━━
+    http://localhost:8000/components-demo
+
+
+6️⃣  Stop project (press Ctrl+C di terminal):
+    ━━━━━━━━━━━━━━━━━━━━━━━━
+    Ctrl+C
+
+
+═══════════════════════════════════════════════════════════════════════
+ 📍 MANUAL SETUP (Jika "composer run dev" tidak bisa)
+═══════════════════════════════════════════════════════════════════════
+
+Buka 3 Terminal/Command Prompt terpisah:
+
+TERMINAL 1 - Laravel Server:
+━━━━━━━━━━━━━━━━━━━━━━━━━
+cd "c:\SIMONE\LANDING PAGE\lp-kpm"
+php artisan serve
+
+Output: "Laravel development server started"
+URL: http://127.0.0.1:8000
+
+
+TERMINAL 2 - Node Dev Server:
+━━━━━━━━━━━━━━━━━━━━━━━━━
+cd "c:\SIMONE\LANDING PAGE\lp-kpm"
+npm run dev
+
+Output: "VITE v... ready in XXms"
+
+
+TERMINAL 3 - Logs (Optional):
+━━━━━━━━━━━━━━━━━━━━━━━━━
+cd "c:\SIMONE\LANDING PAGE\lp-kpm"
+php artisan pail
+
+
+═══════════════════════════════════════════════════════════════════════
+ 📍 MAC/LINUX USERS
+═══════════════════════════════════════════════════════════════════════
+
+1️⃣  Navigate to project:
+    cd ~/path/to/lp-kpm
+    # Or if in Downloads:
+    cd ~/Downloads/lp-kpm
+
+
+2️⃣  Setup:
+    composer run setup
+
+
+3️⃣  Run:
+    composer run dev
+
+
+4️⃣  Browser:
+    http://localhost:8000
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🎯 WHAT YOU SHOULD SEE
+═══════════════════════════════════════════════════════════════════════
+
+Terminal Output:
+┌─────────────────────────────────────────────────────────────────┐
+│  Laravel development server started: http://127.0.0.1:8000     │
+│                                                                 │
+│  VITE v5.0.0 ready in 450 ms                                  │
+│                                                                 │
+│  ➜  Local:   http://localhost:5173/                           │
+│  ➜  press h to show help                                      │
+└─────────────────────────────────────────────────────────────────┘
+
+Browser (http://localhost:8000):
+┌─────────────────────────────────────────────────────────────────┐
+│  [Blue TopBar]                                                  │
+│  [Navigation Menu]                                              │
+│  [Yellow Ticker - scrolling news]                              │
+│  [Hero Slider with stats]                                      │
+│  [Welcome Section]                                             │
+│                                                                 │
+│  ✅ If you see all this → SUCCESS!                            │
+└─────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🔥 COMMON ISSUES & FIXES
+═══════════════════════════════════════════════════════════════════════
+
+❌ "php: command not found"
+   → Download & install PHP from https://www.php.net/downloads
+   → After install: php -v (should show version)
+
+
+❌ "npm: command not found"
+   → Download & install Node.js from https://nodejs.org
+   → Choose LTS version
+   → After install: npm -v (should show version)
+
+
+❌ "Port 8000 already in use"
+   → Use different port: php artisan serve --port 8001
+   → Then access: http://localhost:8001
+
+
+❌ "Port 5173 already in use"
+   → npm run dev -- --port 5174
+
+
+❌ Blank page / 404 error
+   → Wait 30 seconds for Vite to compile first time
+   → Hard refresh: Ctrl+F5
+   → Check console (F12) for errors
+
+
+❌ Old version of page showing
+   → Hard refresh: Ctrl+Shift+F5
+   → Clear cache: Ctrl+Shift+Delete
+
+
+❌ "Cannot find module '@inertiajs/vue3'"
+   → npm install
+
+
+❌ "SQLSTATE: HY000"
+   → Run: php artisan migrate
+
+
+═══════════════════════════════════════════════════════════════════════
+ 📚 DOCUMENTATION
+═══════════════════════════════════════════════════════════════════════
+
+After setup, read these files:
+
+1. QUICK_REFERENCE.md
+   ├─ 5 minute quick lookup
+   ├─ Copy-paste snippets
+   └─ Component examples
+
+2. COMPONENTS_GUIDE.md
+   ├─ Detailed documentation
+   ├─ Props reference
+   └─ Advanced usage
+
+3. GETTING_STARTED.md
+   ├─ Step-by-step walkthrough
+   ├─ Troubleshooting
+   └─ Architecture overview
+
+4. Interactive Demo
+   └─ http://localhost:8000/components-demo
+
+
+═══════════════════════════════════════════════════════════════════════
+ ✨ EDITING & HOT RELOAD
+═══════════════════════════════════════════════════════════════════════
+
+Edit any Vue file:
+  resources/js/Components/**/*.vue
+
+Save the file → Browser updates automatically (within 1-2 seconds)
+
+Try it:
+1. Open: resources/js/Components/Home/Navigation.vue
+2. Change: brand.name: 'KPM' → 'DEMO'
+3. Save
+4. Watch browser refresh automatically! ✨
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🏗️ BUILD FOR PRODUCTION
+═══════════════════════════════════════════════════════════════════════
+
+When ready to deploy:
+
+npm run build
+
+This creates:
+  public/build/
+  ├─ app-XXXXX.js      (minified JavaScript)
+  ├─ app-XXXXX.css     (minified CSS)
+  └─ manifest.json     (asset manifest)
+
+Your assets are now optimized!
+
+
+═══════════════════════════════════════════════════════════════════════
+ ✅ FINAL CHECKLIST
+═══════════════════════════════════════════════════════════════════════
+
+Before asking for help, verify:
+
+✓ PHP installed? (php -v)
+✓ Node installed? (node -v)  
+✓ npm installed? (npm -v)
+✓ Ran composer run setup? (took 2-5 min)
+✓ Ran composer run dev? (shows Laravel + Vite messages)
+✓ Waiting 30 seconds on first load? (Vite compiles)
+✓ Browser URL correct? (http://localhost:8000)
+✓ Hard refresh done? (Ctrl+F5)
+✓ No errors in console? (F12 → Console tab)
+✓ Both terminals showing no red errors?
+
+If all ✓ → You're good to go! 🚀
+
+
+═══════════════════════════════════════════════════════════════════════
+ 🎉 YOU'RE ALL SET!
+═══════════════════════════════════════════════════════════════════════
+
+Now go:
+1. Edit some Vue files
+2. Watch hot reload work
+3. Build amazing UI! 🎨
+4. Read docs for component reference
+5. Customize colors & layouts
+6. Deploy when ready
+
+Happy coding! 🚀✨
