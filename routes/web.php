@@ -2,13 +2,14 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Foundation\Application;
+// use Illuminate\Foundation\Application;
 use App\Http\Controllers\ProfileController;
+
 
 // Landing page dengan components baru
 Route::get('/', function () {
     return Inertia::render('Home');
-})->name('home');
+});
 
 // Demo page untuk lihat semua components
 Route::get('/components-demo', function () {

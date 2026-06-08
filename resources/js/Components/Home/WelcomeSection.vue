@@ -1,94 +1,46 @@
-<script setup>
-const props = defineProps({
-    data: {
-        type: Object,
-        default: () => ({
-            photo: {
-                icon: "👤",
-                alt: "Ketua KPM",
-                badge: "Ketua KPM UKWMS",
-                badgeSubtext: "Periode 2024-2026",
-            },
-            quote: "Mutu adalah komitmen kami untuk keunggulan yang berkelanjutan dalam setiap aspek kehidupan akademik.",
-            content: [
-                "Kantor Penjaminan Mutu (KPM) UKWMS berdedikasi untuk memastikan standar kualitas tertinggi dalam semua kegiatan akademik dan administratif. Kami berkomitmen untuk terus meningkatkan budaya mutu di seluruh institusi.",
-                "Dengan serangkaian program, workshop, dan sistem monitoring yang komprehensif, kami membantu setiap unit di UKWMS untuk mencapai dan mempertahankan standar mutu internasional.",
-            ],
-            signature: "Dr. Ir. H. Bambang Sujanto, M.Sc.",
-            position: "Ketua Kantor Penjaminan Mutu",
-        }),
-    },
-});
-</script>
-
 <template>
-    <section class="bg-white py-24">
-        <div class="mx-auto max-w-5xl px-10">
-            <div class="grid grid-cols-2 gap-16 items-center">
-                <!-- Left Side - Photo & Badge -->
-                <div class="relative">
-                    <div class="relative group">
-                        <!-- Photo Container -->
-                        <div
-                            class="relative w-full aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center text-8xl shadow-lg"
-                        >
-                            {{ data.photo.icon }}
-                        </div>
-
-                        <!-- Shadow Box -->
-                        <div
-                            class="absolute -bottom-6 -right-6 w-full h-full border-4 border-[var(--Y)] rounded-3xl pointer-events-none"
-                        />
-
-                        <!-- Badge -->
-                        <div
-                            class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 bg-[var(--R)] text-white px-6 py-3 rounded-xl text-center shadow-lg z-10 whitespace-nowrap"
-                        >
-                            <div class="text-sm font-bold">
-                                {{ data.photo.badge }}
-                            </div>
-                            <div class="text-xs font-medium opacity-80 mt-0.5">
-                                {{ data.photo.badgeSubtext }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Side - Content -->
-                <div class="pt-12">
-                    <!-- Quote -->
-                    <blockquote
-                        class="font-serif text-xl italic text-[var(--INK)] leading-relaxed border-l-4 border-[var(--Y)] pl-7 mb-8 bg-gray-100 p-6 rounded-r-2xl"
-                    >
-                        "{{ data.quote }}"
-                    </blockquote>
-
-                    <!-- Body Text -->
-                    <div class="space-y-4 mb-8">
-                        <p
-                            v-for="(para, idx) in data.content"
-                            :key="idx"
-                            class="text-[var(--MID)] leading-relaxed"
-                        >
-                            {{ para }}
-                        </p>
-                    </div>
-
-                    <!-- Signature -->
-                    <div>
-                        <div
-                            class="font-serif italic text-xl text-[var(--INK)]"
-                        >
-                            {{ data.signature }}
-                        </div>
-                        <div
-                            class="text-sm font-semibold text-[var(--DIM)] mt-1"
-                        >
-                            {{ data.position }}
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section class="welcome">
+    <div class="c">
+      <div class="wel-wrap">
+        <div class="wel-left ri">
+          <div class="wel-photo"><div class="wel-photo-inner">👤</div></div>
+          <div class="wel-badge">
+            Made Indra Ayu Astarini, S.Kep., Ns., M.Kep.
+            <div class="pos">Ketua Kantor Penjaminan Mutu</div>
+          </div>
         </div>
-    </section>
+        <div class="wel-right ri ri-d2">
+          <div class="tag">Sambutan Pimpinan</div>
+          <h2 class="ht">Selamat Datang di<br />KPM UKWMS</h2>
+          <blockquote class="wel-quote">
+            "Mutu bukan sekadar standar — ia adalah komitmen kami kepada setiap mahasiswa, dosen, dan masyarakat yang mempercayakan pendidikannya kepada UKWMS."
+          </blockquote>
+          <p>
+            Puji syukur kepada Tuhan Yang Maha Esa atas berkat dan rahmat-Nya sehingga Kantor Penjaminan Mutu (KPM) Universitas Katolik Widya Mandala Surabaya dapat terus menjalankan misi penjaminan mutu secara konsisten dan berkelanjutan.
+          </p>
+          <p>
+            KPM hadir sebagai motor penggerak budaya mutu di lingkungan UKWMS. Melalui implementasi SPMI yang komprehensif, kami memastikan setiap aspek layanan akademik dan non-akademik memenuhi standar mutu tertinggi — demi lulusan yang berdaya saing, berkarakter, dan siap mengabdi kepada bangsa.
+          </p>
+          <div class="wel-sig">
+            Made Indra Ayu Astarini, S.Kep., Ns., M.Kep.<small>Ketua Kantor Penjaminan Mutu — UKWMS</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
+
+<style scoped>
+.welcome { background: var(--W); }
+.wel-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 72px; align-items: center; }
+.wel-left { position: relative; }
+.wel-photo { width: 100%; aspect-ratio: 0.75; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, var(--G), #d8d8d8); position: relative; box-shadow: 10px 10px 0 var(--Y); }
+.wel-photo-inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 72px; background: linear-gradient(160deg, #e8e8e8 0%, #c8c8c8 100%); }
+.wel-badge { position: absolute; bottom: -16px; left: 50%; transform: translateX(-50%); background: var(--R); color: #fff; padding: 10px 20px; border-radius: 10px; font-size: 12px; font-weight: 700; text-align: center; white-space: nowrap; box-shadow: 0 8px 24px rgba(234, 31, 39, 0.3); }
+.wel-badge .pos { font-size: 10px; font-weight: 500; opacity: 0.8; margin-top: 2px; }
+.wel-right { padding-left: 8px; }
+.wel-quote { font-family: "DM Serif Display", serif; font-size: clamp(17px, 2vw, 22px); font-style: italic; color: var(--INK); line-height: 1.55; border-left: 4px solid var(--Y); padding: 20px 28px; background: var(--G); border-radius: 0 12px 12px 0; margin-bottom: 28px; }
+.wel-right p { font-size: 15px; color: var(--MID); line-height: 1.85; margin-bottom: 18px; }
+.wel-sig { font-family: "DM Serif Display", serif; font-size: 24px; font-style: italic; color: var(--INK); margin-top: 28px; }
+.wel-sig small { display: block; font-family: "DM Sans", sans-serif; font-size: 12px; font-style: normal; font-weight: 600; color: var(--DIM); margin-top: 4px; letter-spacing: 0.04em; text-transform: uppercase; }
+</style>

@@ -1,0 +1,83 @@
+# name: Deploy Landing Page KPM
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   deploy:
+#     name: Deploy to Production
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Deploy via SSH
+#         uses: appleboy/ssh-action@v1.0.0
+#         with:
+#           host: ${{ secrets.SSH_HOST }}
+#           username: ${{ secrets.SSH_USER }}
+#           key: ${{ secrets.SSH_PRIVATE_KEY }}
+#           port: 22
+#           script: |
+#             set -e
+
+#             echo "=== Pulling latest code ==="
+#             cd /var/www/landing-page-kpm
+#             git pull origin main
+
+#             echo "=== Copying .env ==="
+#             cp /var/www/landing-page-kpm/.env.production /var/www/landing-page-kpm/.env
+
+#             echo "=== Building & restarting containers ==="
+#             docker compose up -d --build --remove-orphans
+
+#             echo "=== Running migrations ==="
+#             docker exec landing-page-kpm php artisan migrate --force
+
+#             echo "=== Clearing cache ==="
+#             docker exec landing-page-kpm php artisan config:cache
+#             docker exec landing-page-kpm php artisan route:cache
+#             docker exec landing-page-kpm php artisan view:cache
+
+#             echo "=== Cleaning up old images ==="
+#             docker image prune -f
+
+#             echo "=== Deploy selesai! ==="
+
+
+name: Deploy Landing Page KPM
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            set -e
+            cd /var/www/landing-page-kpm
+            git pull origin main
+            cp .env.production .env
+            docker compose up -d --build --remove-orphans
+            docker exec landing-page-kpm php artisan migrate --force
+            docker exec landing-page-kpm php artisan config:cache
+            docker exec landing-page-kpm php artisan route:cache
+            docker exec landing-page-kpm php artisan view:cache
+            docker image prune -f
