@@ -9,7 +9,7 @@
         </div>
         <a href="#" class="ri" style="font-size: 13px; font-weight: 700; color: var(--B)">Arsip Berita →</a>
       </div>
-      <div class="art-grid">
+      <!-- <div class="art-grid">
         <a href="#" class="art-card main ri">
           <div class="art-img g1" style="height: 300px">
             <div class="art-img-ph">🎓</div>
@@ -51,7 +51,7 @@
           <div class="art-body"><div class="art-meta"><span>3 Mei 2025</span></div><div class="art-title">3 Prodi UKWMS Berhasil Raih Akreditasi Internasional FIBAA</div></div>
           <div class="art-footer"><span class="art-rd">Selengkapnya →</span><span class="art-vw">👁 567</span></div>
         </a>
-      </div>
+      </div> -->
       <div class="center mt-10 ri">
         <a href="#" class="btn-outline-dk">📰 Lihat Semua Berita & Artikel</a>
       </div>

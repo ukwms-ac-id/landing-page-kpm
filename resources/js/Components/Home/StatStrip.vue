@@ -4,22 +4,22 @@
       <div class="stat-row">
         <div class="st-item ri">
           <div class="st-ico">🎓</div>
-          <div class="st-num">A<span class="st-sup">+</span></div>
+          <div class="st-num">Unggul<span class="st-sup"></span></div>
           <div class="st-lbl">Akreditasi Institusi</div>
         </div>
         <div class="st-item ri ri-d1">
           <div class="st-ico">🏛️</div>
-          <div class="st-num">48<span class="st-sup">+</span></div>
+          <div class="st-num">40<span class="st-sup"></span></div>
           <div class="st-lbl">Prodi Terakreditasi</div>
         </div>
         <div class="st-item ri ri-d2">
           <div class="st-ico">📋</div>
-          <div class="st-num">6</div>
+          <div class="st-num">#</div>
           <div class="st-lbl">Siklus AMI</div>
         </div>
         <div class="st-item ri ri-d3">
           <div class="st-ico">📄</div>
-          <div class="st-num">200<span class="st-sup">+</span></div>
+          <div class="st-num">#<span class="st-sup"></span></div>
           <div class="st-lbl">Dokumen SPMI</div>
         </div>
       </div>

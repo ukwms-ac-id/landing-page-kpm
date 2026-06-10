@@ -9,10 +9,10 @@
         <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">FIBAA<div class="mit-sub">International</div></div></div>
         <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">AUN-QA<div class="mit-sub">ASEAN Network</div></div></div>
         <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">LAMDIK<div class="mit-sub">Dikti</div></div></div>
-        <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">ISO 9001<div class="mit-sub">:2015</div></div></div>
+        <!-- <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">ISO 9001<div class="mit-sub">:2015</div></div></div> -->
         <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">Kemendiktisaintek<div class="mit-sub">Nasional</div></div></div>
         <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">LLDIKTI<div class="mit-sub">Wil. VII</div></div></div>
-        <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">APTKI<div class="mit-sub">Nasional</div></div></div>
+        <div class="mit-cell"><div class="mit-name" style="color: var(--MID)">APTIK<div class="mit-sub">Nasional</div></div></div>
       </div>
     </div>
   </section>

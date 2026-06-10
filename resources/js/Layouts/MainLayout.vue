@@ -14,15 +14,15 @@ const navLinks = ['Beranda', 'Profil ▾', 'Tupoksi ▾', 'Akreditasi', 'Dokumen
         <div class="tb-left">
           <a href="#">📍 Jl. Dinoyo 42–44, Surabaya 60265</a>
           <span class="tb-sep">|</span>
-          <a href="mailto:kpm@ukwms.ac.id">✉ kpm@ukwms.ac.id</a>
+          <a href="mailto:sekretariatkpm@ukwms.ac.id">✉ sekretariatkpm@ukwms.ac.id</a>
           <span class="tb-sep">|</span>
-          <a href="tel:031">☎ (031) 5678-478 ext. 120</a>
+          <!-- <a href="#">☎ (031) 5678-478</a> -->
         </div>
         <div class="tb-right">
-          <a href="#" class="tb-social">IG</a>
-          <a href="#" class="tb-social">YT</a>
-          <a href="#" class="tb-social">LI</a>
-          <a href="#" class="tb-social">FB</a>
+          <a href="https://www.instagram.com/ukwmsofficial/" target="_blank" class="tb-social">IG</a>
+          <!-- <a href="https://www.youtube.com/@ukwms" target="_blank" class="tb-social">YT</a> -->
+          <a href="https://www.linkedin.com/school/universitas-katolik-widya-mandala-surabaya/about/" target="_blank" class="tb-social">LI</a>
+          <!-- <a href="#" class="tb-social">FB</a> -->
           <span class="tb-sep" style="margin: 0 4px">|</span>
           <a href="https://ukwms.ac.id" style="color: rgba(255, 255, 255, 0.8); font-weight: 600">↗ ukwms.ac.id</a>
         </div>
@@ -32,10 +32,10 @@ const navLinks = ['Beranda', 'Profil ▾', 'Tupoksi ▾', 'Akreditasi', 'Dokumen
     <div class="ticker" @mouseenter="isTickerPaused = true" @mouseleave="isTickerPaused = false">
       <div class="ticker-track" :style="{ animationPlayState: isTickerPaused ? 'paused' : 'running' }">
         <div class="ticker-item" v-for="i in 2" :key="i">
-          <span class="ticker-item"><span class="ticker-dot"></span>🔔 Pendaftaran AMI Semester Genap 2024/2025 dibuka — Deadline 30 Juni 2025</span>
-          <span class="ticker-item"><span class="ticker-dot"></span>🏅 UKWMS Raih Akreditasi Unggul BAN-PT — Selamat & Terimakasih atas kerja keras seluruh sivitas</span>
-          <span class="ticker-item"><span class="ticker-dot"></span>📋 Workshop Penulisan Dokumen SPMI — 12 Juni 2025, Aula Benediktus</span>
-          <span class="ticker-item"><span class="ticker-dot"></span>🌐 3 Prodi UKWMS berhasil raih Akreditasi Internasional FIBAA</span>
+          <span class="ticker-item"><span class="ticker-dot"></span>🔔 Pelaksanaan AMI (Fakultas, Prodi, Unit Kerja) 2025/2026 dilaksanakan pada bulan Oktober 2026</span>
+          <span class="ticker-item"><span class="ticker-dot"></span>🔔 RTM Tingkat Fakultas periode 2025/2026 akan dilaksanakan pada bulan Oktober - November 2026  </span>
+          <span class="ticker-item"><span class="ticker-dot"></span>📋 Pembuatan dan Pengumpulan laporan AMI oleh Auditor ke KPM akan dilaksanakan pada bulan November 2026</span>
+          <!-- <span class="ticker-item"><span class="ticker-dot"></span>🌐 3 Prodi UKWMS berhasil raih Akreditasi Internasional FIBAA</span> -->
         </div>
       </div>
     </div>
@@ -79,15 +79,15 @@ const navLinks = ['Beranda', 'Profil ▾', 'Tupoksi ▾', 'Akreditasi', 'Dokumen
             <p class="ft-about">Kantor Penjaminan Mutu Universitas Katolik Widya Mandala Surabaya berkomitmen membangun budaya mutu yang berkelanjutan demi menghasilkan lulusan unggul, berkarakter Katolik, dan berdaya saing global.</p>
             <div class="ft-soc">
               <a href="#" class="ft-sb">IG</a>
-              <a href="#" class="ft-sb">YT</a>
+              <!-- <a href="#" class="ft-sb">YT</a>
               <a href="#" class="ft-sb">LI</a>
-              <a href="#" class="ft-sb">FB</a>
+              <a href="#" class="ft-sb">FB</a> -->
             </div>
           </div>
           <div class="ft-col">
             <h4>Navigasi</h4>
             <ul>
-              <li><a href="#">Beranda</a></li><li><a href="#">Sejarah KPM</a></li><li><a href="#">Visi & Misi</a></li>
+              <li><a href="#">Beranda</a></li><li><a href="#">Visi & Misi</a></li>
               <li><a href="#">Struktur Organisasi</a></li><li><a href="#">Tupoksi</a></li><li><a href="#">Berita & Artikel</a></li>
             </ul>
           </div>
@@ -107,8 +107,8 @@ const navLinks = ['Beranda', 'Profil ▾', 'Tupoksi ▾', 'Akreditasi', 'Dokumen
           </div>
         </div>
         <div class="ft-bottom">
-          <p>© 2025 Kantor Penjaminan Mutu — <a href="https://ukwms.ac.id">Universitas Katolik Widya Mandala Surabaya</a>. All rights reserved.</p>
-          <p>Dikembangkan oleh <a href="#">UKWMS IT Development</a></p>
+          <p>© 2026 Kantor Penjaminan Mutu — <a href="https://ukwms.ac.id" target="_blank">Universitas Katolik Widya Mandala Surabaya</a>. All rights reserved.</p>
+          <p>Dikembangkan oleh <a href="https://ukwms.ac.id" target="_blank">UKWMS IT Development</a></p>
         </div>
       </div>
       <div class="ft-bar"></div>

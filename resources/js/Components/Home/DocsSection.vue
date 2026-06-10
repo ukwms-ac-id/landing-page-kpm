@@ -9,14 +9,14 @@
         <a href="#" class="ri btn-outline-dk" style="padding: 10px 20px; font-size: 13px">📂 Semua Dokumen →</a>
       </div>
       <div class="dok-grid">
-        <a href="#" class="dok-card ri"><div class="dok-ico bi">📘</div><div><div class="dok-lbl">Kebijakan SPMI</div><div class="dok-cnt">12 dokumen</div></div></a>
-        <a href="#" class="dok-card ri ri-d1"><div class="dok-ico yi">📋</div><div><div class="dok-lbl">Standar SPMI</div><div class="dok-cnt">47 dokumen</div></div></a>
-        <a href="#" class="dok-card ri ri-d2"><div class="dok-ico gi">📑</div><div><div class="dok-lbl">Formulir & SOP</div><div class="dok-cnt">85 dokumen</div></div></a>
-        <a href="#" class="dok-card ri ri-d3"><div class="dok-ico bi">🔎</div><div><div class="dok-lbl">Laporan AMI</div><div class="dok-cnt">18 laporan</div></div></a>
-        <a href="#" class="dok-card ri"><div class="dok-ico yi">📈</div><div><div class="dok-lbl">Laporan Monev</div><div class="dok-cnt">24 laporan</div></div></a>
-        <a href="#" class="dok-card ri ri-d1"><div class="dok-ico ri">🏅</div><div><div class="dok-lbl">Dokumen Akreditasi</div><div class="dok-cnt">36 dokumen</div></div></a>
-        <a href="#" class="dok-card ri ri-d2"><div class="dok-ico gi">⚖️</div><div><div class="dok-lbl">Regulasi & Peraturan</div><div class="dok-cnt">29 regulasi</div></div></a>
-        <a href="#" class="dok-card ri ri-d3"><div class="dok-ico bi">🌐</div><div><div class="dok-lbl">ISO & Sertifikasi</div><div class="dok-cnt">8 dokumen</div></div></a>
+        <a href="#" class="dok-card ri"><div class="dok-ico bi">📘</div><div><div class="dok-lbl">Kebijakan SPMI</div><div class="dok-cnt"># dokumen</div></div></a>
+        <a href="#" class="dok-card ri ri-d1"><div class="dok-ico yi">📋</div><div><div class="dok-lbl">Standar SPMI</div><div class="dok-cnt"># dokumen</div></div></a>
+        <a href="#" class="dok-card ri ri-d2"><div class="dok-ico gi">📑</div><div><div class="dok-lbl">Formulir & POB</div><div class="dok-cnt"># dokumen</div></div></a>
+        <a href="#" class="dok-card ri ri-d3"><div class="dok-ico bi">🔎</div><div><div class="dok-lbl">Laporan AMI</div><div class="dok-cnt"># laporan</div></div></a>
+        <a href="#" class="dok-card ri"><div class="dok-ico yi">📈</div><div><div class="dok-lbl">Laporan Monev</div><div class="dok-cnt"># laporan</div></div></a>
+        <a href="#" class="dok-card ri ri-d1"><div class="dok-ico ri">🏅</div><div><div class="dok-lbl">Dokumen Akreditasi</div><div class="dok-cnt"># dokumen</div></div></a>
+        <a href="#" class="dok-card ri ri-d2"><div class="dok-ico gi">⚖️</div><div><div class="dok-lbl">Regulasi & Peraturan</div><div class="dok-cnt"># regulasi</div></div></a>
+        <a href="#" class="dok-card ri ri-d3"><div class="dok-ico bi">🌐</div><div><div class="dok-lbl">ISO & Sertifikasi</div><div class="dok-cnt"># dokumen</div></div></a>
       </div>
     </div>
   </section>

@@ -14,7 +14,7 @@ defineProps({
         type: Array,
         default: () => [
             { icon: "f", href: "#" },
-            { icon: "ig", href: "#" },
+            { icon: "ig", href: "https://www.instagram.com/ukwmsofficial/" },
             { icon: "tw", href: "#" },
         ],
     },

@@ -47,7 +47,7 @@ onUnmounted(() => clearInterval(timer));
 
     <div class="slides-wrap" :style="{ transform: `translateX(-${cur * 100}%)` }">
       
-      <div class="slide slide-1">
+      <div class="slide slide-2">
         <div class="slide-mesh"></div><div class="slide-grid"></div>
         <div class="orb orb-1"></div><div class="orb orb-2"></div><div class="orb orb-3"></div>
         <div class="slide-diag"></div><div class="slide-stripes"><span></span><span></span></div>
@@ -65,39 +65,39 @@ onUnmounted(() => clearInterval(timer));
             <div class="stat-grid">
               <div class="stat-cell"><div class="stat-ico">🎓</div><div class="stat-num">A<span class="stat-sup">+</span></div><div class="stat-lbl">Akreditasi Institusi</div></div>
               <div class="stat-cell"><div class="stat-ico">🏛️</div><div class="stat-num">40<span class="stat-sup">+</span></div><div class="stat-lbl">Prodi Terakreditasi</div></div>
-              <div class="stat-cell"><div class="stat-ico">📋</div><div class="stat-num">6</div><div class="stat-lbl">Siklus AMI</div></div>
-              <div class="stat-cell"><div class="stat-ico">📄</div><div class="stat-num">200<span class="stat-sup">+</span></div><div class="stat-lbl">Dokumen SPMI</div></div>
+              <!-- <div class="stat-cell"><div class="stat-ico">📋</div><div class="stat-num">6</div><div class="stat-lbl">Siklus AMI</div></div>
+              <div class="stat-cell"><div class="stat-ico">📄</div><div class="stat-num"><span class="stat-sup">+</span></div><div class="stat-lbl">Dokumen SPMI</div></div> -->
             </div>
           </div>
         </div>
-      </div>
+      </div>  
 
-      <div class="slide slide-2">
+      <div class="slide slide-1">
         <div class="slide-mesh"></div><div class="slide-grid"></div>
         <div class="orb orb-1"></div><div class="orb orb-2"></div>
         <div class="slide-diag"></div><div class="slide-stripes"><span></span><span></span></div>
         <div class="slide-content">
           <div>
-            <div class="slide-badge"><span class="slide-badge-blink"></span>Audit Mutu Internal — AMI 2025</div>
-            <div class="slide-h">Siklus AMI <em>Semester Genap</em><br />2024/2025 Dibuka</div>
-            <p class="slide-p">Pendaftaran Audit Mutu Internal bagi seluruh program studi dan unit kerja di lingkungan UKWMS kini resmi dibuka.</p>
+            <div class="slide-badge"><span class="slide-badge-blink"></span>STANDAR SPMI — KURIKULUM</div>
+            <div class="slide-h">Akses Pedoman <em>Penyusunan Kurikulum</em></div>
+            <p class="slide-p">Pastikan dokumen kurikulum program studi Anda telah selaras dengan visi misi institusi dan memenuhi standar mutu UKWMS.</p>
             <div class="slide-btns">
-              <a href="#" class="btn-slide-p">📝 Daftar Sekarang</a>
-              <a href="#" class="btn-slide-s">Panduan AMI →</a>
+              <a href="#" class="btn-slide-p">Akses Dokumen</a>
+              <a href="#" class="btn-slide-s">Konsultasi KPM →</a>
             </div>
           </div>
-          <div class="slide-panel">
+          <!-- <div class="slide-panel">
             <div class="stat-grid">
-              <div class="stat-cell"><div class="stat-ico">📅</div><div class="stat-num" style="font-size: 22px; margin-top: 4px">30 Jun</div><div class="stat-lbl">Deadline<br />Pendaftaran</div></div>
-              <div class="stat-cell"><div class="stat-ico">🏫</div><div class="stat-num">10<span class="stat-sup">+</span></div><div class="stat-lbl">Fakultas & Unit</div></div>
+              <div class="stat-cell"><div class="stat-ico">⚖️</div><div class="stat-num" style="font-size: 22px; margin-top: 4px">Kepatuhan:</div><div class="stat-lbl"><br />Wajib bagi Semua Prodi</div></div>
+              <div class="stat-cell"><div class="stat-ico">🔍</div><div class="stat-num">10<span class="stat-sup">+</span></div><div class="stat-lbl">Fakultas & Unit</div></div>
               <div class="stat-cell"><div class="stat-ico">👥</div><div class="stat-num">64<span class="stat-sup">+</span></div><div class="stat-lbl">Auditor Internal</div></div>
               <div class="stat-cell"><div class="stat-ico">✅</div><div class="stat-num">6</div><div class="stat-lbl">Siklus Berhasil</div></div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
-      <div class="slide slide-3">
+   <div class="slide slide-2">
         <div class="slide-mesh"></div>
         <div class="slide-grid" style="background-image: linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);"></div>
         <div class="orb orb-1"></div><div class="orb orb-2"></div>
@@ -105,20 +105,20 @@ onUnmounted(() => clearInterval(timer));
         <div class="slide-stripes"><span></span><span></span></div>
         <div class="slide-content">
           <div>
-            <div class="slide-badge" style="background: rgba(0,0,0,0.1); color: var(--INK); border-color: rgba(0,0,0,0.15);"><span class="slide-badge-blink"></span>Prestasi Akreditasi Terbaru</div>
-            <div class="slide-h">UKWMS Raih <em>Akreditasi</em><br />Unggul BAN-PT</div>
-            <p class="slide-p">Universitas Katolik Widya Mandala Surabaya resmi meraih predikat Akreditasi Unggul.</p>
+            <div class="slide-badge" style="background: rgba(0,0,0,0.1); color: var(--INK); border-color: rgba(0,0,0,0.15);"><span class="slide-badge-blink"></span>Siklus Akademik 2025/2026</div>
+            <div class="slide-h">Pelaksanaan <em>AMI</em><br />Internal UKWMS</div>
+            <p class="slide-p">Audit Mutu Internal (AMI) 2025/2026 segera dimulai. KPM mengawal evaluasi terintegrasi bagi seluruh Fakultas, Program Studi, dan Unit Kerja untuk peningkatan budaya mutu berkelanjutan.</p>
             <div class="slide-btns">
-              <a href="#" class="btn-slide-p">🏅 Baca Selengkapnya</a>
-              <a href="#" class="btn-slide-s" style="border-color: rgba(0,0,0,0.2); color: var(--INK)">Dokumen Akreditasi →</a>
+              <a href="#" class="btn-slide-p">📅 Jadwal Pelaksanaan</a>
+              <a href="#" class="btn-slide-s" style="border-color: rgba(0,0,0,0.2); color: var(--INK)">Akses Instrumen AMI →</a>
             </div>
           </div>
           <div class="slide-panel" style="background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.1);">
             <div class="stat-grid" style="background: rgba(0,0,0,0.04);">
-              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">🌟</div><div class="stat-num" style="color: var(--R)">Unggul</div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">Status BAN-PT</div></div>
-              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">🌐</div><div class="stat-num" style="color: var(--R)">3</div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">Prodi FIBAA Int'l</div></div>
-              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">📊</div><div class="stat-num" style="color: var(--R)">98<span class="stat-sup">%</span></div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">Prodi Akreditasi A/Unggul</div></div>
-              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">🎯</div><div class="stat-num" style="color: var(--R)">Top<span class="stat-sup">10</span></div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">PTS Terbaik Jawa Timur</div></div>
+              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">🏫</div><div class="stat-num" style="color: var(--R)">10</div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">Fakultas</div></div>
+              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">🏛️</div><div class="stat-num" style="color: var(--R)">40</div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">Program Studi</div></div>
+              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">🏢</div><div class="stat-num" style="color: var(--R)">10<span class="stat-sup">+</span></div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">Unit Kerja</div></div>
+              <div class="stat-cell" style="background: rgba(0,0,0,0.03);"><div class="stat-ico">📋</div><div class="stat-num" style="color: var(--R)">100<span class="stat-sup">%</span></div><div class="stat-lbl" style="color: rgba(0,0,0,0.45)">Target Evaluasi</div></div>
             </div>
           </div>
         </div>
