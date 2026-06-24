@@ -9,24 +9,27 @@
       <div class="org-wrapper ri">
         <div class="org-tree">
           
-          <div class="org-row has-spine">
+          <!-- Baris 1: Ketua + Wakil Ketua sejajar -->
+          <div class="org-row branch has-spine">
             <div class="on top">
               <div class="on-t">Ketua KPM</div>
               <div class="on-n">Made Indra Ayu Astarini, S.Kep., Ns., M.Kep.</div>
             </div>
-          </div>
-
-          <div class="org-row branch has-spine">
-            <div class="on">
+            <div class="on top">
               <div class="on-t">Wakil Ketua KPM</div>
               <div class="on-n">Rr. Arielia Yustisiana, S.S., M.Hum.</div>
             </div>
+          </div>
+
+          <!-- Baris 2: Sekretaris sendiri -->
+          <div class="org-row has-spine">
             <div class="on">
               <div class="on-t">Sekretaris</div>
               <div class="on-n">Lanny Agustine</div>
             </div>
           </div>
 
+          <!-- Baris 3: Koordinator Bidang I & II -->
           <div class="org-row branch has-spine">
             <div class="on">
               <div class="on-t">Koordinator Bidang I</div>
@@ -40,16 +43,15 @@
             </div>
           </div>
 
+          <!-- Baris 4: Divisi -->
           <div class="org-row branch">
             <div class="on">
               <div class="on-t">Divisi</div>
-              <!-- <div class="on-n">Akreditasi & Sertifikasi</div> -->
             </div>
             <div class="on">
               <div class="on-t">Divisi</div>
               <div class="on-n">Pengembangan SPME</div>
               <div class="on-d">Anastasia Nelladia Cendra, S.Pd., M.Pd.</div>
-              <!-- <div class="on-n"></div> -->
             </div>
           </div>
 

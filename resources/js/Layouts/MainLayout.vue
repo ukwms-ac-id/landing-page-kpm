@@ -4,7 +4,7 @@ import { ref } from 'vue';
 const isTickerPaused = ref(false);
 const activeNav = ref('Beranda');
 
-const navLinks = ['Beranda', 'Profil ▾', 'Tupoksi ▾', 'Akreditasi', 'Dokumen ▾', 'Berita', 'Kontak'];
+const navLinks = ['Beranda', 'Profil', 'Tupoksi', 'Akreditasi', 'Dokumen', 'Berita', 'Kontak'];
 </script>
 
 <template>
