@@ -65,6 +65,16 @@ RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/storage \
     && chmod -R 755 /var/www/html/bootstrap/cache
 
+# Pastikan folder temp Nginx bisa ditulis oleh www-data (nginx.conf pakai
+# user www-data, tapi paket nginx Alpine default-nya bukan untuk user ini)
+RUN mkdir -p /var/lib/nginx/tmp/client_body \
+             /var/lib/nginx/tmp/proxy \
+             /var/lib/nginx/tmp/fastcgi \
+             /var/lib/nginx/tmp/uwsgi \
+             /var/lib/nginx/tmp/scgi \
+    && chown -R www-data:www-data /var/lib/nginx
+
+    
 # Run Laravel optimizations
 RUN composer run-script post-autoload-dump || true \
     && php artisan config:cache || true \
