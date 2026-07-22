@@ -2,8 +2,15 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Http\Request;
+
+use Throwable;
 use Inertia\Middleware;
+
+use App\Models\Documents;
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Cache;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -29,11 +36,31 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
-        return [
-            ...parent::share($request),
+        return array_merge(parent::share($request), [
             'auth' => [
                 'user' => $request->user(),
             ],
-        ];
+            'navDocuments' => $this->getNavDocuments(),
+        ]);
+    }
+
+      private function getNavDocuments(): array
+    {
+        try {
+            return Cache::remember('nav-documents', now()->addMinutes(5), function () {
+                return Documents::where('is_active', true)
+                    ->orderBy('title')
+                    ->get(['slug', 'title', 'category'])
+                    ->toArray();
+            });
+        } catch (Throwable $e) {
+            Log::error('Gagal memuat navDocuments untuk dropdown navbar', [
+                'message' => $e->getMessage(),
+                'file'    => $e->getFile(),
+                'line'    => $e->getLine(),
+            ]);
+ 
+            return [];
+        }
     }
 }
