@@ -77,6 +77,15 @@ jobs:
             git pull origin main
             cp .env.production .env
             docker compose up -d --build --remove-orphans
+            
+            # 1. Install & Update dependensi backend (Laravel)
+            docker exec landing-page-kpm composer install --optimize-autoloader --no-dev
+            
+            # 2. Install & Compile dependensi frontend (Vue/Inertia) -> INI KUNCINYA
+            docker exec landing-page-kpm npm install
+            docker exec landing-page-kpm npm run build
+            
+            # 3. Refresh Cache & Database
             docker exec landing-page-kpm php artisan migrate --force
             docker exec landing-page-kpm php artisan config:cache
             docker exec landing-page-kpm php artisan route:cache
