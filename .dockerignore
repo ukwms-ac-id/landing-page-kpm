@@ -1,0 +1,48 @@
+# === Git & VCS (tidak relevan untuk image, cuma bikin build context berat) ===
+.git
+.github
+.gitignore
+.gitattributes
+
+# === Docker itu sendiri (tidak perlu ikut ke dalam image) ===
+.dockerignore
+Dockerfile
+docker-compose*.yml
+
+# === Editor / IDE (sama seperti .gitignore) ===
+.phpactor.json
+/.codex
+/.cursor/
+/.idea
+/.nova
+/.vscode
+/.zed
+
+# === Dependency & build artifact (WAJIB, ini penyebab lambat) ===
+/node_modules
+/vendor
+/public/build
+/public/hot
+/public/storage
+
+# === Cache & temp file ===
+*.log
+.DS_Store
+.phpunit.result.cache
+/.phpunit.cache
+/storage/pail
+_ide_helper.php
+Homestead.json
+Homestead.yaml
+Thumbs.db
+
+# === Environment files (JANGAN ikut ter-bake ke image) ===
+.env
+.env.backup
+.env.production
+/auth.json
+/storage/*.key
+
+# === Testing & docs lokal (opsional, kalau ada) ===
+tests
+README.md
