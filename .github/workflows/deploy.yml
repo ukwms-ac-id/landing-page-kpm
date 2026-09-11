@@ -70,6 +70,34 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
+          # script: |
+          #   set -e
+          #   cd /var/www/landing-page-kpm
+            
+          #   # 1. Atasi error 'dubious ownership' dari Git
+          #   git config --global --add safe.directory /var/www/landing-page-kpm
+            
+          #   # 2. Reset dan Pull kode terbaru
+          #   git reset --hard HEAD
+          #   git pull origin main
+          #   cp .env.production .env
+            
+          #   # 3. Nyalakan kontainer utama
+          #   docker compose up -d --build --remove-orphans
+            
+          #   # 4. Install dependency Backend (Laravel)
+          #   docker exec landing-page-kpm composer install --optimize-autoloader --no-dev
+            
+          #   # 5. KUNCI PERBAIKAN: Gunakan kontainer Node.js sementara untuk build Vue/Frontend
+          #   docker run --rm -v /var/www/landing-page-kpm:/app -w /app node:20-alpine sh -c "npm install && npm run build"
+            
+          #   # 6. Refresh Cache & Database
+          #   docker exec landing-page-kpm php artisan migrate --force
+          #   docker exec landing-page-kpm php artisan config:cache
+          #   docker exec landing-page-kpm php artisan route:cache
+          #   docker exec landing-page-kpm php artisan view:cache
+          #   docker image prune -f
+
           script: |
             set -e
             cd /var/www/landing-page-kpm
@@ -88,12 +116,14 @@ jobs:
             # 4. Install dependency Backend (Laravel)
             docker exec landing-page-kpm composer install --optimize-autoloader --no-dev
             
-            # 5. KUNCI PERBAIKAN: Gunakan kontainer Node.js sementara untuk build Vue/Frontend
-            docker run --rm -v /var/www/landing-page-kpm:/app -w /app node:20-alpine sh -c "npm install && npm run build"
+            # 5. KUNCI PERBAIKAN: Gunakan Node 22 agar sesuai syarat Vite
+            docker run --rm -v /var/www/landing-page-kpm:/app -w /app node:22-alpine sh -c "npm install && npm run build"
             
-            # 6. Refresh Cache & Database
+            # 6. Refresh Cache, Database & Buka Izin Upload File
             docker exec landing-page-kpm php artisan migrate --force
             docker exec landing-page-kpm php artisan config:cache
             docker exec landing-page-kpm php artisan route:cache
             docker exec landing-page-kpm php artisan view:cache
+            docker exec landing-page-kpm chmod -R 777 storage
+            
             docker image prune -f
